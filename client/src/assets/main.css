@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Handlee&family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Handlee&family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
 
 @theme {
   --font-btn: "Handlee", cursive;
   --font-title: "Just Another Hand", cursive;
   --font-main: "Roboto", cursive;
-  --font-semiMain: "Roboto Mono", cursive
+  --font-semiMain: "Roboto Mono", cursive;
 }
