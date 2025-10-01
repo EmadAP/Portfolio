@@ -16,6 +16,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "@twistify/react-icons": "^1.0.6",
+    "@twistify/vue3-icons": "^1.0.6",
     "lucide-vue-next": "^0.544.0",
     "pinia": "^3.0.3",
     "vue": "^3.5.18",

@@ -17,13 +17,14 @@ import { ChevronLeft, ChevronRight, Menu, Slash } from "lucide-vue-next";
           <ChevronRight />
         </div>
       </button>
-      <div class="md:flex hidden flex-row items-center justify-center gap-6">
+      <div class="lg:flex hidden flex-row items-center justify-center gap-6">
         <button class="Nav-Btn">Home</button>
         <button class="Nav-Btn">Projects</button>
         <button class="Nav-Btn">About</button>
+        <button class="Nav-Btn">Skills</button>
         <button class="Nav-Btn">Contact</button>
       </div>
-      <div class="md:hidden flex">
+      <div class="lg:hidden flex">
         <Menu />
       </div>
     </div>
