@@ -1,33 +1,28 @@
 <script lang="ts" setup>
+import { AiPhoneOutlined } from "@twistify/vue3-icons/ai";
 import { IonEmail } from "@twistify/vue3-icons/ion";
-import { MiContactPage } from "@twistify/vue3-icons/mi";
+import { TiLocation } from "@twistify/vue3-icons/ti";
 </script>
 <template>
   <div class="font-main bg-stone-200 h-[93vh] text-stone-900">
     <div
-      class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-16 items-center justify-around text-center max-w-screen-2xl mx-auto"
+      class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-10 items-center justify-around max-w-screen-2xl mx-auto"
     >
       <h1 class="text-7xl font-semibold font-btn text-center">Contact me</h1>
-      <p class="text-xl">
+      <p class="text-xl text-center">
         I'm always happy to discuss opportunities, answer questions, or explore
         new ideas. Send a message or connect online.
       </p>
-      <div class="grid grid-cols-1 lg:grid-cols-2 justify-between gap-8">
+      <div
+        class="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-8 border py-10 px-5 rounded-xl shadow-2xl hover:scale-105 duration-300 bg-stone-100"
+      >
         <div class="flex flex-col gap-8">
-          <div class="flex flex-row gap-4 items-center">
-            <MiContactPage :size="70" />
-            <div class="flex flex-col gap-4 items-start">
-              <h3 class="font-btn font-semibold text-xl">
-                Contact Information
-              </h3>
-              <span class="text-sm text-stone-700"
-                >Reach me directly via email or phone for questions or
-                collaborations.</span
-              >
-            </div>
-          </div>
-          <div class="flex flex-row gap-4   items-baseline">
-            <IonEmail :size="40" class="" />
+          <h3 class="font-btn font-semibold text-start text-3xl pb-5">
+            Contact Information
+          </h3>
+
+          <div class="flex flex-row gap-4">
+            <IonEmail :size="50" />
             <div class="flex flex-col gap-2 items-start">
               <h3 class="font-semibold text-base">Email</h3>
               <span class="text-sm text-stone-700"
@@ -35,10 +30,60 @@ import { MiContactPage } from "@twistify/vue3-icons/mi";
               >
             </div>
           </div>
-          <AiPhoneOutlined />
+          <div class="flex flex-row gap-4">
+            <AiPhoneOutlined :size="50" />
+            <div class="flex flex-col gap-2 items-start">
+              <h3 class="font-semibold text-base">Phone</h3>
+              <span class="text-sm text-stone-700">+98 911 886 0294</span>
+            </div>
+          </div>
+          <div class="flex flex-row gap-4">
+            <TiLocation :size="50" />
+            <div class="flex flex-col gap-2 items-start">
+              <h3 class="font-semibold text-base">Location</h3>
+              <span class="text-sm text-stone-700">Iran-Gilan</span>
+            </div>
+          </div>
         </div>
         <div class="flex flex-col gap-8">
-          <div></div>
+          <h3 class="font-btn font-semibold text-start text-3xl pb-5">
+            Send me a message
+          </h3>
+          <div class="flex flex-col gap-2">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="What's your name?"
+              class="border bg-stone-200 py-3 px-2 rounded-xl"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="What's your email?"
+              class="border bg-stone-200 py-3 px-2 rounded-xl"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="msg">Your message</label>
+            <textarea
+              type="text"
+              cols="20"
+              rows="5"
+              id="msg"
+              placeholder="What would you like to say?"
+              class="border bg-stone-200 py-3 px-2 rounded-xl"
+            ></textarea>
+          </div>
+          <button
+            class="font-btn hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+          >
+            Send Message
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { RaHamburgerMenu } from "@twistify/react-icons/ra";
 import { ChevronLeft, ChevronRight, Menu, Slash } from "lucide-vue-next";
 </script>
 <template>

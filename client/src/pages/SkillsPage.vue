@@ -1,17 +1,10 @@
 <script lang="ts" setup>
 import {
   SkCss,
-  SkExpressjsLight,
-  SkGithubLight,
-  SkGitlabLight,
   SkHtml,
   SkJavascript,
   SkMongodb,
-  SkNextjsLight,
-  SkReactLight,
-  SkTailwindcssLight,
   SkTypescript,
-  SkVuejsLight,
 } from "@twistify/vue3-icons/sk";
 </script>
 <template>
