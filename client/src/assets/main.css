@@ -8,3 +8,6 @@
   --font-semiMain: "Roboto Mono", cursive;
   --primary-green: #073617;
 }
+body {
+  background-color: #e7e5e4;
+}

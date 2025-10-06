@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="font-main bg-stone-200 h-[93vh] text-stone-900">
+  <div class="font-main bg-stone-200 xl:h-[93vh] h-full text-stone-900">
     <div
       class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-16 items-center justify-around text-center max-w-screen-2xl mx-auto"
     >

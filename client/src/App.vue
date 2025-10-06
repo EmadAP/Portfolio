@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Mouse from './assets/Mouse.vue';
 import Navbar from './template/Navbar.vue';
 
 </script>
@@ -12,5 +13,6 @@ import Navbar from './template/Navbar.vue';
     <Navbar />
 
     <router-view />
+    <Mouse />
   </div>
 </template>

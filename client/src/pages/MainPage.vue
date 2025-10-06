@@ -6,13 +6,27 @@ import ProjectsPage from "./ProjectsPage.vue";
 import SkillsPage from "./SkillsPage.vue";
 </script>
 <template>
-  <HomePage />
+  <div id="home">
+    <HomePage />
+  </div>
   <div class="h-2 bg-stone-900"></div>
-  <ProjectsPage />
+
+  <div id="projects">
+    <ProjectsPage />
+  </div>
   <div class="h-2 bg-stone-900"></div>
-  <AboutPage />
+
+  <div id="about">
+    <AboutPage />
+  </div>
   <div class="h-2 bg-stone-900"></div>
-  <SkillsPage />
+
+  <div id="skills">
+    <SkillsPage />
+  </div>
   <div class="h-2 bg-stone-900"></div>
-  <ContactPage />
+
+  <div id="contact">
+    <ContactPage />
+  </div>
 </template>

@@ -4,7 +4,7 @@ import { IonEmail } from "@twistify/vue3-icons/ion";
 import { TiLocation } from "@twistify/vue3-icons/ti";
 </script>
 <template>
-  <div class="font-main bg-stone-200 h-[93vh] text-stone-900">
+  <div class="font-main bg-stone-200 min-h-screen  text-stone-900">
     <div
       class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-10 items-center justify-around max-w-screen-2xl mx-auto"
     >
