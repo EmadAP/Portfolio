@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="font-main px-4 w-full bg-stone-200 py-12 text-stone-900">
+  <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">
     <div
       class="flex flex-col gap-6 lg:gap-10 max-w-screen-2xl py-12 mx-auto items-center"
     >

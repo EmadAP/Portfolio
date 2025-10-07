@@ -9,24 +9,20 @@ import SkillsPage from "./SkillsPage.vue";
   <div id="home">
     <HomePage />
   </div>
-  <div class="h-2 bg-stone-900"></div>
 
-  <div id="projects">
-    <ProjectsPage />
-  </div>
-  <div class="h-2 bg-stone-900"></div>
+  <div id="projects" class="h-2 bg-stone-900"></div>
 
-  <div id="about">
-    <AboutPage />
-  </div>
-  <div class="h-2 bg-stone-900"></div>
+  <ProjectsPage />
 
-  <div id="skills">
-    <SkillsPage />
-  </div>
-  <div class="h-2 bg-stone-900"></div>
+  <div id="about" class="h-2 bg-stone-900"></div>
 
-  <div id="contact">
-    <ContactPage />
-  </div>
+  <AboutPage />
+
+  <div id="skills" class="h-2 bg-stone-900"></div>
+
+  <SkillsPage />
+
+  <div id="contact" class="h-2 bg-stone-900"></div>
+
+  <ContactPage />
 </template>

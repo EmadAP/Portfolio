@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
 <template>
   <div class="font-main bg-stone-200 xl:h-[93vh] h-full text-stone-900">
     <div
@@ -29,6 +36,7 @@
       >
         <button
           class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+          @click="scrollToSection('resume')"
         >
           Resume
         </button>

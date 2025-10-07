@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import Mouse from './assets/Mouse.vue';
-import Navbar from './template/Navbar.vue';
-
+import Mouse from "./assets/Mouse.vue";
+import Navbar from "./template/Navbar.vue";
 </script>
 
 <template>

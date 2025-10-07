@@ -7,11 +7,10 @@ const cursorY = ref(window.innerHeight / 2);
 const circleX = ref(cursorX.value);
 const circleY = ref(cursorY.value);
 
-const isHoveringText = ref(false); // <-- NEW state
+const isHoveringText = ref(false);
 
 let animationFrame: number;
 
-// Lerp for smooth follow
 function lerp(start: number, end: number, factor: number) {
   return start + (end - start) * factor;
 }
@@ -29,14 +28,14 @@ function handleMouseMove(e: MouseEvent) {
 
 function handleMouseOver(e: MouseEvent) {
   const target = e.target as HTMLElement;
-  if (target.matches("p, button, span, h1, h3")) {
+  if (target.matches("p, button, span, h1, h3, svg, path")) {
     isHoveringText.value = true;
   }
 }
 
 function handleMouseOut(e: MouseEvent) {
   const target = e.target as HTMLElement;
-  if (target.matches("p, button, span, h1, h3")) {
+  if (target.matches("p, button, span, h1, h3, svg, path")) {
     isHoveringText.value = false;
   }
 }
@@ -57,10 +56,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- Circle Follower -->
   <div
     class="z-100 pointer-events-none fixed rounded-full bg-white mix-blend-difference transition-all duration-100 ease-in-out"
-    :class="isHoveringText ? 'w-24 h-24 -top-4 -left-4' : 'w-10 h-10 top-3 left-3'"
+    :class="
+      isHoveringText ? 'w-24 h-24 -top-4 -left-4' : 'w-10 h-10 top-3 left-3'
+    "
     :style="{
       transform: `translate(${circleX - 32}px, ${circleY - 32}px)`,
     }"

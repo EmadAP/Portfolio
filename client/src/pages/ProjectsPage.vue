@@ -2,7 +2,7 @@
 import { Music } from "lucide-vue-next";
 </script>
 <template>
-  <div class="font-main px-4 w-full bg-stone-200 py-12 text-stone-900">
+  <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">
     <div class="max-w-screen-2xl h-full py-12 mx-auto items-center">
       <h1 class="md:text-7xl text-5xl font-semibold font-btn text-center">
         Projects
