@@ -30,7 +30,7 @@ function scrollToSection(id: string) {
 
 <template>
   <div
-    class="font-btn sticky z-10 inset-x-0 top-0 px-4 h-20 bg-stone-800 transition-all duration-700"
+    class="font-btn sticky z-20 inset-x-0 top-0 px-4 h-20 bg-stone-800 transition-all duration-700"
     :class="
       isScrolled
         ? 'mx-auto sm:mx-5 lg:mx-20 sm:rounded-xl top-9 bg-stone-800/90 backdrop-blur-lg'

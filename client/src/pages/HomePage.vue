@@ -42,6 +42,7 @@ function scrollToSection(id: string) {
         </button>
         <button
           class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+          @click="scrollToSection('contact')"
         >
           Contact
         </button>

@@ -1,9 +1,13 @@
 <script lang="ts" setup>
 import AxiosIconSvg from "@/assets/icons/Axios-icon-svg.vue";
+import CssIconSvg from "@/assets/icons/Css-icon-svg.vue";
 import ExpressIconSvg from "@/assets/icons/Express-icon-svg.vue";
 import GithubIconSvg from "@/assets/icons/Github-icon-svg.vue";
 import GitlabIconSvg from "@/assets/icons/Gitlab-icon-svg.vue";
+import HtmlIconSvg from "@/assets/icons/Html-icon-svg.vue";
+import JsIconSvg from "@/assets/icons/Js-icon-svg.vue";
 import MaterialUiIconSvg from "@/assets/icons/MaterialUi-icon-svg.vue";
+import MongodbIconSvg from "@/assets/icons/Mongodb-icon-svg.vue";
 import NextIconSvg from "@/assets/icons/Next-icon-svg.vue";
 import NodejsIconSvg from "@/assets/icons/Nodejs-icon-svg.vue";
 import ReactIconSvg from "@/assets/icons/React-icon-svg.vue";
@@ -11,14 +15,8 @@ import ReactQueryIconSvg from "@/assets/icons/ReactQuery-icon-svg.vue";
 import ReduxIconSvg from "@/assets/icons/Redux-icon-svg.vue";
 import ShadcnUiIconSvg from "@/assets/icons/ShadcnUi-icon-svg.vue";
 import TailwindcssIconSvg from "@/assets/icons/Tailwindcss-icon-svg.vue";
+import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
 import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
-import {
-  SkCss,
-  SkHtml,
-  SkJavascript,
-  SkMongodb,
-  SkTypescript,
-} from "@twistify/vue3-icons/sk";
 </script>
 <template>
   <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">
@@ -36,11 +34,11 @@ import {
         <div
           class="grid grid-cols-3 md:grid-cols-6 justify-center gap-x-30 gap-y-20"
         >
-          <SkJavascript :size="50" />
-          <SkTypescript :size="50" />
-          <SkMongodb :size="50" />
-          <SkCss :size="50" />
-          <SkHtml :size="50" />
+          <JsIconSvg />
+          <TsIconSvg />
+          <MongodbIconSvg />
+          <CssIconSvg />
+          <HtmlIconSvg />
           <NodejsIconSvg />
           <ReduxIconSvg />
           <VueIconSvg />
