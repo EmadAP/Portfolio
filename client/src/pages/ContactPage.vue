@@ -8,7 +8,11 @@ import { TiLocation } from "@twistify/vue3-icons/ti";
     <div
       class="h-full py-14 md:py-16 px-3 lg:px-20 flex flex-col gap-10 items-center justify-around max-w-screen-2xl mx-auto"
     >
-      <h1 class="text-7xl font-semibold font-btn text-center">Contact me</h1>
+      <h1
+        class="underline decoration-solid text-7xl font-semibold font-btn text-center"
+      >
+        Contact me
+      </h1>
       <p class="text-xl text-center">
         I'm always happy to discuss opportunities, answer questions, or explore
         new ideas. Send a message or connect online.

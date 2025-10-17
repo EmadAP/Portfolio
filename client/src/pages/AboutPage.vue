@@ -4,7 +4,11 @@
     <div
       class="flex flex-col gap-6 lg:gap-10 max-w-screen-2xl py-12 mx-auto items-center"
     >
-      <h1 class="text-7xl font-semibold font-btn text-center">About me</h1>
+      <h1
+        class="underline decoration-solid text-7xl font-semibold font-btn text-center"
+      >
+        About me
+      </h1>
       <img
         class="mx-auto h-[250px] w-[250px] rounded-full object-cover"
         src="/public/Cat-on-couch.jpg"

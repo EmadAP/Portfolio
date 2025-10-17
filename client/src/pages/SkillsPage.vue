@@ -24,7 +24,9 @@ import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
       class="flex flex-col gap-14 lg:gap-20 max-w-screen-2xl py-12 mx-auto items-center"
     >
       <div class="flex flex-col gap-10 lg:gap-16 pb-12 items-center">
-        <h1 class="text-7xl font-semibold font-btn text-center">
+        <h1
+          class="underline decoration-solid text-7xl font-semibold font-btn text-center"
+        >
           Technical Expertise
         </h1>
         <p class="text-lg md:text-xl xl:text-2xl">
@@ -58,7 +60,11 @@ import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
         </p>
       </div>
       <di class="flex flex-col gap-10 lg:gap-16 pb-12 items-center">
-        <h3 class="text-5xl font-semibold font-btn text-center">My Resume</h3>
+        <h3
+          class="underline decoration-solid text-5xl font-semibold font-btn text-center"
+        >
+          My Resume
+        </h3>
         <p class="">
           View my professional qualifications and experience in front-end
           development.
