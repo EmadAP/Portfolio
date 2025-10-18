@@ -1,46 +1,96 @@
 <script setup lang="ts">
 import { IonChevronLeft, IonChevronRight } from "@twistify/vue3-icons/ion";
 
-// No script logic needed; purely visual
+import { ref, onMounted, onUnmounted, watch } from "vue";
+
+const skills = [
+  "Frontend",
+  "React",
+  "Next",
+  "Tailwind",
+  "Typescript",
+  "Javascript",
+  "Express",
+  "Vue",
+  "Mongodb",
+  "Css",
+  "Html",
+];
+
+const speed = ref(70);
+let lastScrollY = 0;
+let ticking = false;
+
+// Scroll handler to adjust speed
+function handleScroll() {
+  const currentScrollY = window.scrollY;
+  const delta = Math.abs(currentScrollY - lastScrollY);
+
+  // Map delta to new speed: faster scroll → shorter duration → faster animation
+  speed.value = Math.max(20, 70 - delta * 0.5);
+
+  lastScrollY = currentScrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      ticking = false;
+    });
+    ticking = true;
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <div class="overflow-hidden whitespace-nowrap w-full h-full">
+  <div
+    class="relative w-screen h-[200px] overflow-hidden bg-stone-200 flex items-center"
+  >
+    <!-- Fade mask on left/right -->
     <div
-      class="inline-block animate-marquee text-[400px] leading-40 font-extrabold font-title text-stone-700 font-stretch-ultra-expanded"
-    >
-     
-      <span
-        v-for="n in 1"
-        :key="n"
-        class="mr-16 flex flex-row gap-8 w-full h-full items-center"
-        ><IonChevronLeft :size="80" /> Frontend
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" /> React
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Next
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Tailwind
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Typescript
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Javascript
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Express
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Vue
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Mongodb
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Css
-        <IonChevronRight :size="80" /><IonChevronLeft :size="80" />Html
-        <IonChevronLeft :size="80" />
-      </span>
+      class="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_right,transparent,black 20%,black 80%,transparent)] z-10"
+    ></div>
+
+    <!-- Moving container -->
+    <div class="flex will-change-transform whitespace-nowrap animate-marquee">
+      <!-- Repeat content twice for seamless loop -->
+      <div
+        v-for="repeat in 200"
+        :key="repeat"
+        class="flex flex-row items-center gap-16"
+      >
+        <template v-for="(skill, index) in skills" :key="index">
+          <IonChevronLeft :size="60" />
+          <span
+            class="text-[150px] font-extrabold font-title text-stone-700 leading-none"
+          >
+            {{ skill }}
+          </span>
+          <IonChevronRight :size="60" />
+        </template>
+      </div>
     </div>
   </div>
 </template>
 
+
 <style scoped>
 @keyframes marquee {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
+/* Infinite scrolling */
 .animate-marquee {
   animation: marquee 70s linear infinite;
 }

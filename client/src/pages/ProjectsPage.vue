@@ -63,7 +63,7 @@ import ProjectpageTemp from "@/template/ProjectpageTemp.vue";
             ],
           }"
         />
-        <!-- <MovingText /> -->
+        <MovingText />
         <ProjectpageTemp
           projectName="Tickly Dashboard"
           repoUrl="https://github.com/EmadAP/Tickly/tree/main/admin"

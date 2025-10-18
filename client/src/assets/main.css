@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Handlee&family=Just+Another+Hand&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @theme {
   --font-btn: "Handlee", cursive;
   --font-title: "Just Another Hand", cursive;
