@@ -7,7 +7,7 @@ function scrollToSection(id: string) {
 }
 </script>
 <template>
-  <div class="font-main bg-stone-200 xl:h-[93vh] h-full text-stone-900">
+  <div class="font-main bg-stone-200 text-stone-900 xl:h-[93vh] h-full ">
     <div
       class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-16 items-center justify-around text-center max-w-screen-2xl mx-auto"
     >
@@ -40,6 +40,7 @@ function scrollToSection(id: string) {
         >
           Resume
         </button>
+
         <button
           class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
           @click="scrollToSection('contact')"
