@@ -4,14 +4,19 @@ import { defineProps } from "vue";
 interface Props {
   label: string;
   icon: any;
+  smallRadius?: number; // optional
+  bigRadius?: number; // optional
 }
 
 const props = defineProps<Props>();
 
+// default fallbacks
+const smallRadius = props.smallRadius ?? 60;
+const bigRadius = props.bigRadius ?? 75;
+
 const smallIconsCount = 8;
 const bigIconCount = 12;
-const smallRadius = 60;
-const bigRadius = 75;
+
 const smallAngles = Array.from(
   { length: smallIconsCount },
   (_, i) => (360 / smallIconsCount) * i
@@ -24,7 +29,7 @@ const bigAngles = Array.from(
 
 <template>
   <div class="relative flex items-center justify-center group">
-    <!-- Orbiting icons: hidden by default, show on hover -->
+    <!-- Orbiting icons -->
     <div
       class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     >

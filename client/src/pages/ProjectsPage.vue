@@ -15,7 +15,7 @@ import MovingText from "@/components/MovingText.vue";
 import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
 </script>
 <template>
-  <div class="font-main px-4 w-full bg-stone-200 text-stone-900 py-20">
+  <div class="font-main w-full bg-stone-200 text-stone-900 py-20">
     <div class="w-full h-full py-12 items-center">
       <h1
         class="max-w-screen-2xl mx-auto underline decoration-solid md:text-7xl text-5xl font-semibold font-btn text-center"
@@ -47,7 +47,6 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
               ReactIconSvg,
               NextIconSvg,
               ReactQueryIconSvg,
-              ShadcnUiIconSvg,
               AxiosIconSvg,
             ],
           }"
@@ -60,7 +59,6 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
               AxiosIconSvg,
             ],
           }"
-          class="max-w-screen-2xl"
         />
         <MovingText />
         <ProjectPageTemp
@@ -84,7 +82,6 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
               ReactIconSvg,
               NextIconSvg,
               ReactQueryIconSvg,
-              ShadcnUiIconSvg,
               AxiosIconSvg,
             ],
           }"
@@ -97,7 +94,6 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
               AxiosIconSvg,
             ],
           }"
-          class="max-w-screen-2xl"
         />
         <MovingText />
         <ProjectPageTemp
@@ -131,7 +127,6 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
               AxiosIconSvg,
             ],
           }"
-          class="max-w-screen-2xl"
         />
       </div>
     </div>

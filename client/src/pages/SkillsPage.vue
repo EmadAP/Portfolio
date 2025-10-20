@@ -17,9 +17,13 @@ import ShadcnUiIconSvg from "@/assets/icons/ShadcnUi-icon-svg.vue";
 import TailwindcssIconSvg from "@/assets/icons/Tailwindcss-icon-svg.vue";
 import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
 import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
+import AnimatedBtn from "@/components/AnimatedBtn.vue";
+import { AiCloudDownloadOutlined } from "@twistify/vue3-icons/ai";
 </script>
 <template>
-  <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">
+  <div
+    class="text-center font-main px-4 w-full bg-stone-200 py-20 text-stone-900"
+  >
     <div
       class="flex flex-col gap-14 lg:gap-20 max-w-screen-2xl py-12 mx-auto items-center"
     >
@@ -34,7 +38,7 @@ import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
           technologies
         </p>
         <div
-          class="grid grid-cols-3 md:grid-cols-6 justify-center gap-x-30 gap-y-20"
+          class="grid grid-cols-3 lg:grid-cols-6 justify-center gap-x-30 gap-y-20"
         >
           <JsIconSvg />
           <TsIconSvg />
@@ -59,7 +63,7 @@ import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
           Constantly refining and expanding my technical skillset
         </p>
       </div>
-      <di class="flex flex-col gap-10 lg:gap-16 pb-12 items-center">
+      <di class="flex flex-col gap-10 lg:gap-16 pb-12 items-center mx-2">
         <h3
           class="underline decoration-solid text-5xl font-semibold font-btn text-center"
         >
@@ -69,16 +73,26 @@ import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
           View my professional qualifications and experience in front-end
           development.
         </p>
+
         <div
-          class="hover:scale-105 duration-300 w-full p-1 bg-white border border-stone-900/70 shadow-2xl rounded-xl"
+          class="hover:scale-105 mb-20 w-full bg-white border border-stone-900/70 shadow-2xl rounded-xl relative transition-all duration-400 inline-flex group"
         >
-          <img src="/public/Resume.png" alt="resume" />
+          <div
+            class="absolute rounded-xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+          ></div>
+          <img
+            class="z-10 mx-auto rounded-xl object-cover"
+            src="/Resume.png"
+            alt="resume"
+          />
         </div>
-        <button
-          class="font-btn hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
-        >
-          Download Resume
-        </button>
+
+        <AnimatedBtn
+          label="Download"
+          :icon="AiCloudDownloadOutlined"
+          :smallRadius="80"
+          :bigRadius="110"
+        />
       </di>
     </div>
   </div>

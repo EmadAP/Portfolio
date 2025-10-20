@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AnimatedBtn from "@/components/AnimatedBtn.vue";
 import { MiResume } from "@twistify/vue3-icons/mi";
+import { IonMdContact } from "@twistify/vue3-icons/ion";
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id);
@@ -10,7 +11,7 @@ function scrollToSection(id: string) {
 }
 </script>
 <template>
-  <div class="font-main bg-stone-200 text-stone-900 h-screen">
+  <div class="font-main bg-stone-200 text-stone-900 h-screen overflow-hidden">
     <div
       class="pt-30 pb-20 gap-5 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
     >
@@ -46,7 +47,9 @@ function scrollToSection(id: string) {
 
         <AnimatedBtn
           label="Contact"
-          :icon="MiResume"
+          :icon="IonMdContact"
+          :smallRadius="65"
+          :bigRadius="80"
           @click="scrollToSection('contact')"
         />
       </div>
