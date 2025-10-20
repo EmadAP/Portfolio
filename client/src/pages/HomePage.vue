@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import AnimatedBtn from "@/components/AnimatedBtn.vue";
+import { MiResume } from "@twistify/vue3-icons/mi";
+
 function scrollToSection(id: string) {
   const el = document.getElementById(id);
   if (el) {
@@ -9,7 +12,7 @@ function scrollToSection(id: string) {
 <template>
   <div class="font-main bg-stone-200 text-stone-900 h-screen">
     <div
-      class="pt-30 pb-10 gap-10 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
+      class="pt-30 pb-20 gap-5 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
     >
       <h1
         class="relative font-title text-6xl sm:text-7xl md:text-8xl font-bold w-fit"
@@ -35,19 +38,17 @@ function scrollToSection(id: string) {
       </p>
 
       <div class="font-btn flex flex-row items-center justify-around w-full">
-        <button
-          class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+        <AnimatedBtn
+          label="Resume"
+          :icon="MiResume"
           @click="scrollToSection('resume')"
-        >
-          Resume
-        </button>
+        />
 
-        <button
-          class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+        <AnimatedBtn
+          label="Contact"
+          :icon="MiResume"
           @click="scrollToSection('contact')"
-        >
-          Contact
-        </button>
+        />
       </div>
     </div>
   </div>

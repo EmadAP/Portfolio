@@ -6,7 +6,7 @@
   --font-title: "Just Another Hand", cursive;
   --font-main: "Roboto", cursive;
   --font-semiMain: "Roboto Mono", cursive;
-  --primary-green: #073617;
+  --accent: #1d6bd7;
 }
 body {
   background-color: #e7e5e4;
