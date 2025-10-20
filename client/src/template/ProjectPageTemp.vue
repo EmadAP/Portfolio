@@ -53,7 +53,7 @@ const props = defineProps<Props>();
     <div
       class="flex flex-col lg:flex-row justify-around w-full gap-4 lg:gap-10"
     >
-      <MagneticWrapper :strength="100" :range="400">
+      <MagneticWrapper :strength="100" :range="300">
         <div
           class="relative h-fit lg:w-fit bg-stone-100 px-2 py-10 rounded-2xl flex flex-col gap-8 hover:shadow-2xl transition duration-500"
         >
@@ -74,7 +74,7 @@ const props = defineProps<Props>();
         </div>
       </MagneticWrapper>
 
-      <MagneticWrapper :strength="100" :range="400">
+      <MagneticWrapper :strength="100" :range="300">
         <div
           class="relative h-fit lg:w-fit bg-stone-100 px-2 py-10 rounded-2xl flex flex-col gap-8 hover:shadow-2xl transition duration-500"
         >
@@ -100,9 +100,7 @@ const props = defineProps<Props>();
           <div class="flex flex-col gap-8 w-full">
             <h3 class="text-5xl font-bold font-btn">{{ backend.name }}:</h3>
             <div class="w-full border-b-3 border-dashed"></div>
-            <div
-              class="w-full grid grid-cols-5 lg:grid-cols-4 gap-8 lg:gap-12"
-            >
+            <div class="w-full grid grid-cols-5 lg:grid-cols-4 gap-8 lg:gap-12">
               <component
                 v-for="(icon, index) in backend.icons"
                 :is="icon"

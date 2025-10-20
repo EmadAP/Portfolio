@@ -7,15 +7,17 @@ function scrollToSection(id: string) {
 }
 </script>
 <template>
-  <div class="font-main bg-stone-200 text-stone-900 xl:h-[93vh] h-full ">
+  <div class="font-main bg-stone-200 text-stone-900 h-screen">
     <div
-      class="h-full py-16 md:py-20 px-3 lg:px-20 flex flex-col gap-16 items-center justify-around text-center max-w-screen-2xl mx-auto"
+      class="pt-30 pb-10 gap-10 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
     >
-      <h1 class="font-title text-6xl sm:text-7xl md:text-8xl font-bold">
-        Hi!. My name is Emad Amoupour
+      <h1
+        class="relative font-title text-6xl sm:text-7xl md:text-8xl font-bold w-fit"
+      >
+        <span>Hi!. My name is Emad Amoupour</span>
       </h1>
 
-      <p class="md:text-3xl text-2xl md:leading-16 leading-12">
+      <p class="md:text-2xl lg:text-3xl text-xl md:leading-16 leading-12">
         <span class="font-semiMain font-extrabold lg:text-4xl text-3xl"
           >Welcome to my portfolio.
         </span>
@@ -31,9 +33,8 @@ function scrollToSection(id: string) {
         with creative ideas, and continuously improving my skills to grow as a
         developer.
       </p>
-      <div
-        class="font-btn flex flex-row items-center justify-center max-w-screen-md mx-auto gap-28"
-      >
+
+      <div class="font-btn flex flex-row items-center justify-around w-full">
         <button
           class="hover:scale-105 duration-300 bg-stone-800 hover:bg-stone-700 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
           @click="scrollToSection('resume')"

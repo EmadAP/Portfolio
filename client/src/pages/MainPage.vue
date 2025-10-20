@@ -6,23 +6,21 @@ import ProjectsPage from "./ProjectsPage.vue";
 import SkillsPage from "./SkillsPage.vue";
 </script>
 <template>
-  <div id="home">
-    <HomePage />
-  </div>
+  <HomePage id="home" />
 
-  <div id="projects" class="h-2 bg-stone-900"></div>
+  <div class="h-2 bg-stone-900"></div>
 
-  <ProjectsPage />
+  <ProjectsPage id="projects" />
 
-  <div id="about" class="h-2 bg-stone-900"></div>
+  <div class="h-2 bg-stone-900"></div>
 
-  <AboutPage />
+  <AboutPage id="about" />
 
-  <div id="skills" class="h-2 bg-stone-900"></div>
+  <div class="h-2 bg-stone-900"></div>
+  <!-- we have scroll width problem here  -->
+  <SkillsPage id="skills" />
 
-  <SkillsPage />
+  <div class="h-2 bg-stone-900"></div>
 
-  <div id="contact" class="h-2 bg-stone-900"></div>
-
-  <ContactPage />
+  <ContactPage id="contact" />
 </template>

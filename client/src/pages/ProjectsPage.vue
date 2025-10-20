@@ -6,29 +6,27 @@ import HtmlIconSvg from "@/assets/icons/Html-icon-svg.vue";
 import MongodbIconSvg from "@/assets/icons/Mongodb-icon-svg.vue";
 import NextIconSvg from "@/assets/icons/Next-icon-svg.vue";
 import NodejsIconSvg from "@/assets/icons/Nodejs-icon-svg.vue";
-import PaperClipIconSvg from "@/assets/icons/PaperClip-icon-svg.vue";
 import ReactIconSvg from "@/assets/icons/React-icon-svg.vue";
 import ReactQueryIconSvg from "@/assets/icons/ReactQuery-icon-svg.vue";
 import ShadcnUiIconSvg from "@/assets/icons/ShadcnUi-icon-svg.vue";
 import TailwindcssIconSvg from "@/assets/icons/Tailwindcss-icon-svg.vue";
 import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
-import MagneticWrapper from "@/components/MagneticWrapper.vue";
 import MovingText from "@/components/MovingText.vue";
-import ProjectpageTemp from "@/template/ProjectpageTemp.vue";
+import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
 </script>
 <template>
   <div class="font-main px-4 w-full bg-stone-200 text-stone-900 py-20">
-    <div class="max-w-screen-2xl h-full py-12 mx-auto items-center">
+    <div class="w-full h-full py-12 items-center">
       <h1
-        class="underline decoration-solid md:text-7xl text-5xl font-semibold font-btn text-center"
+        class="max-w-screen-2xl mx-auto underline decoration-solid md:text-7xl text-5xl font-semibold font-btn text-center"
       >
         Projects
       </h1>
 
       <div
-        class="pt-20 flex flex-col items-center h-full justify-between gap-30"
+        class="pt-20 flex flex-col items-center h-full justify-between gap-20"
       >
-        <ProjectpageTemp
+        <ProjectPageTemp
           projectName="Tickly"
           repoUrl="https://github.com/EmadAP/Tickly/tree/main/client"
           imageUrl="/Tickly.png"
@@ -62,9 +60,10 @@ import ProjectpageTemp from "@/template/ProjectpageTemp.vue";
               AxiosIconSvg,
             ],
           }"
+          class="max-w-screen-2xl"
         />
         <MovingText />
-        <ProjectpageTemp
+        <ProjectPageTemp
           projectName="Tickly Dashboard"
           repoUrl="https://github.com/EmadAP/Tickly/tree/main/admin"
           imageUrl="/Tickly-Dashboard.png"
@@ -98,9 +97,10 @@ import ProjectpageTemp from "@/template/ProjectpageTemp.vue";
               AxiosIconSvg,
             ],
           }"
+          class="max-w-screen-2xl"
         />
         <MovingText />
-        <ProjectpageTemp
+        <ProjectPageTemp
           projectName="StayNest"
           repoUrl="https://github.com/EmadAP/StayNest"
           imageUrl="/Staynest.png"
@@ -131,6 +131,7 @@ import ProjectpageTemp from "@/template/ProjectpageTemp.vue";
               AxiosIconSvg,
             ],
           }"
+          class="max-w-screen-2xl"
         />
       </div>
     </div>

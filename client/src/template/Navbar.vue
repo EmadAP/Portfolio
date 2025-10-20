@@ -29,96 +29,100 @@ function scrollToSection(id: string) {
 </script>
 
 <template>
-  <div
-    class="font-btn sticky z-20 inset-x-0 top-0 px-4 h-20 bg-stone-800 transition-all duration-700"
-    :class="
-      isScrolled
-        ? 'mx-auto sm:mx-5 lg:mx-20 sm:rounded-xl top-9 bg-stone-800/90 backdrop-blur-lg'
-        : 'mx-0'
-    "
-  >
+  <div class="fixed w-full font-btn z-20">
     <div
-      class="flex flex-row justify-between text-white items-center h-full transition-all duration-700"
+      class="px-4 h-20 bg-stone-800 transition-all duration-700"
+      :class="
+        isScrolled
+          ? 'mx-auto lg:mx-20 sm:mx-2 sm:rounded-xl  mt-6 bg-stone-800/90 backdrop-blur-lg'
+          : 'mx-0'
+      "
     >
-      <button class="cursor-pointer" @click="scrollToSection('home')">
-        <div class="flex flex-row items-center relative">
-          <IonChevronLeft :size="20" />
-          <p class="text-3xl font-base">Emad Amoupour</p>
-          <RaSlash :size="30" class="absolute -right-9" />
-
-          <IonChevronRight :size="20" class="absolute -right-11" />
-        </div>
-      </button>
-
-      <div class="lg:flex hidden flex-row items-center justify-center gap-6">
-        <button class="Nav-Btn" @click="scrollToSection('home')">Home</button>
-        <button class="Nav-Btn" @click="scrollToSection('projects')">
-          Projects
-        </button>
-        <button class="Nav-Btn" @click="scrollToSection('about')">About</button>
-        <button class="Nav-Btn" @click="scrollToSection('skills')">
-          Skills
-        </button>
-        <button class="Nav-Btn" @click="scrollToSection('contact')">
-          Contact
-        </button>
-      </div>
-
-      <div class="lg:hidden flex">
-        <AiMenuOutlined
-          v-if="!isMenuOpen"
-          :size="50"
-          class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
-          @click="isMenuOpen = true"
-        />
-        <AiCloseOutlined
-          v-else
-          :size="50"
-          class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
-          @click="isMenuOpen = false"
-        />
-      </div>
-    </div>
-    <transition name="fade">
       <div
-        v-if="isMenuOpen"
-        class="lg:hidden flex flex-col bg-stone-800 text-white mt-2 rounded-xl shadow-md p-4 space-y-3"
-        :class="
-          isScrolled ? 'mx-auto bg-stone-800/95 backdrop-blur-lg' : 'mx-0'
-        "
+        class="flex flex-row justify-between text-white items-center h-full transition-all duration-700"
       >
-        <button
-          class="Nav-Btn w-full text-left"
-          @click="scrollToSection('home')"
-        >
-          Home
+        <button class="cursor-pointer" @click="scrollToSection('home')">
+          <div class="flex flex-row items-center relative">
+            <IonChevronLeft :size="20" />
+            <p class="text-3xl font-base">Emad Amoupour</p>
+            <RaSlash :size="30" class="absolute -right-9" />
+
+            <IonChevronRight :size="20" class="absolute -right-11" />
+          </div>
         </button>
-        <button
-          class="Nav-Btn w-full text-left"
-          @click="scrollToSection('projects')"
-        >
-          Projects
-        </button>
-        <button
-          class="Nav-Btn w-full text-left"
-          @click="scrollToSection('about')"
-        >
-          About
-        </button>
-        <button
-          class="Nav-Btn w-full text-left"
-          @click="scrollToSection('skills')"
-        >
-          Skills
-        </button>
-        <button
-          class="Nav-Btn w-full text-left"
-          @click="scrollToSection('contact')"
-        >
-          Contact
-        </button>
+
+        <div class="lg:flex hidden flex-row items-center justify-center gap-6">
+          <button class="Nav-Btn" @click="scrollToSection('home')">Home</button>
+          <button class="Nav-Btn" @click="scrollToSection('projects')">
+            Projects
+          </button>
+          <button class="Nav-Btn" @click="scrollToSection('about')">
+            About
+          </button>
+          <button class="Nav-Btn" @click="scrollToSection('skills')">
+            Skills
+          </button>
+          <button class="Nav-Btn" @click="scrollToSection('contact')">
+            Contact
+          </button>
+        </div>
+
+        <div class="lg:hidden flex">
+          <AiMenuOutlined
+            v-if="!isMenuOpen"
+            :size="50"
+            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
+            @click="isMenuOpen = true"
+          />
+          <AiCloseOutlined
+            v-else
+            :size="50"
+            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
+            @click="isMenuOpen = false"
+          />
+        </div>
       </div>
-    </transition>
+      <transition name="fade">
+        <div
+          v-if="isMenuOpen"
+          class="lg:hidden flex flex-col bg-stone-800 text-white mt-2 rounded-xl shadow-md p-4 space-y-3"
+          :class="
+            isScrolled ? 'mx-auto bg-stone-800/95 backdrop-blur-lg' : 'mx-0'
+          "
+        >
+          <button
+            class="Nav-Btn w-full text-left"
+            @click="scrollToSection('home')"
+          >
+            Home
+          </button>
+          <button
+            class="Nav-Btn w-full text-left"
+            @click="scrollToSection('projects')"
+          >
+            Projects
+          </button>
+          <button
+            class="Nav-Btn w-full text-left"
+            @click="scrollToSection('about')"
+          >
+            About
+          </button>
+          <button
+            class="Nav-Btn w-full text-left"
+            @click="scrollToSection('skills')"
+          >
+            Skills
+          </button>
+          <button
+            class="Nav-Btn w-full text-left"
+            @click="scrollToSection('contact')"
+          >
+            Contact
+          </button>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 

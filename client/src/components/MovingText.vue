@@ -1,7 +1,6 @@
-<script setup lang="ts">
+<script lang="ts" setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { IonChevronLeft, IonChevronRight } from "@twistify/vue3-icons/ion";
-
-import { ref, onMounted, onUnmounted, watch } from "vue";
 
 const skills = [
   "Frontend",
@@ -17,81 +16,91 @@ const skills = [
   "Html",
 ];
 
-const speed = ref(70);
-let lastScrollY = 0;
-let ticking = false;
+const doubledSkills = [...skills, ...skills];
 
-// Scroll handler to adjust speed
-function handleScroll() {
-  const currentScrollY = window.scrollY;
-  const delta = Math.abs(currentScrollY - lastScrollY);
+const marqueeRef = ref<HTMLElement | null>(null);
+const duration = ref(14);
 
-  // Map delta to new speed: faster scroll → shorter duration → faster animation
-  speed.value = Math.max(20, 70 - delta * 0.5);
+let lastScroll = window.scrollY;
 
-  lastScrollY = currentScrollY;
+const onScroll = () => {
+  const currentScroll = window.scrollY;
+  const delta = Math.abs(currentScroll - lastScroll);
 
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      ticking = false;
-    });
-    ticking = true;
-  }
-}
+  const newDuration = Math.max(4, 14 - delta / 20);
+  duration.value = newDuration;
+
+  lastScroll = currentScroll;
+};
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", onScroll);
 });
 
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", onScroll);
 });
 </script>
 
 <template>
   <div
-    class="relative w-screen h-[200px] overflow-hidden bg-stone-200 flex items-center"
+    class="pointer-events-none overflow-y-visible overflow-x-hidden w-full bg-stone-200 py-10 flex flex-row items-center"
   >
-    <!-- Fade mask on left/right -->
     <div
-      class="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_right,transparent,black 20%,black 80%,transparent)] z-10"
-    ></div>
-
-    <!-- Moving container -->
-    <div class="flex will-change-transform whitespace-nowrap animate-marquee">
-      <!-- Repeat content twice for seamless loop -->
+      ref="marqueeRef"
+      class="pointer-events-none flex gap-4 whitespace-nowrap animate-marquee"
+      :style="{ '--marquee-duration': duration + 's' }"
+    >
       <div
-        v-for="repeat in 200"
-        :key="repeat"
-        class="flex flex-row items-center gap-16"
+        v-for="(skill, index) in doubledSkills"
+        :key="index"
+        class="pointer-events-none flex items-center gap-4 shrink-0"
       >
-        <template v-for="(skill, index) in skills" :key="index">
-          <IonChevronLeft :size="60" />
-          <span
-            class="text-[150px] font-extrabold font-title text-stone-700 leading-none"
-          >
-            {{ skill }}
-          </span>
-          <IonChevronRight :size="60" />
-        </template>
+        <IonChevronLeft :size="40" />
+        <span
+          class="pointer-events-none text-[100px] font-extrabold font-title text-stone-700 leading-none"
+        >
+          {{ skill }}
+        </span>
+        <IonChevronRight :size="40" />
+      </div>
+    </div>
+
+    <div
+      ref="marqueeRef"
+      class="pointer-events-none flex gap-4 whitespace-nowrap animate-marquee"
+      :style="{ '--marquee-duration': duration + 's' }"
+    >
+      <div
+        v-for="(skill, index) in doubledSkills"
+        :key="index"
+        class="flex items-center gap-4 shrink-0"
+      >
+        <IonChevronLeft :size="40" />
+        <span
+          class="pointer-events-none text-[100px] font-extrabold font-title text-stone-700 leading-none"
+        >
+          {{ skill }}
+        </span>
+        <IonChevronRight :size="40" />
       </div>
     </div>
   </div>
 </template>
 
-
 <style scoped>
 @keyframes marquee {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(0%);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
 
-/* Infinite scrolling */
 .animate-marquee {
-  animation: marquee 70s linear infinite;
+  display: flex;
+  animation: marquee linear infinite;
+  animation-duration: var(--marquee-duration);
 }
 </style>
