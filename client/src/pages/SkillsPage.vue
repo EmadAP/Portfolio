@@ -22,8 +22,8 @@ import { AiCloudDownloadOutlined } from "@twistify/vue3-icons/ai";
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/EmadAp_resume_english.pdf"; // path from /public
-  link.download = "EmadAp_resume_english.pdf"; // file name for user
+  link.href = "/assets/EmadAp_resume_english.pdf";
+  link.download = "EmadAp_resume_english.pdf";
   link.click();
 };
 </script>
@@ -89,7 +89,7 @@ const downloadResume = () => {
           ></div>
           <img
             class="z-10 mx-auto rounded-xl object-cover"
-            src="/Resume.png"
+            src="/assets/Resume.png"
             alt="resume"
           />
         </div>

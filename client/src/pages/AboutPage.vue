@@ -17,7 +17,7 @@
         ></div>
         <img
           class="px-6 py-6 z-10 mx-auto rounded-full object-cover"
-          src="/image1.jpg"
+          src="/assets/image1.jpg"
           alt="developer"
         />
       </div>
