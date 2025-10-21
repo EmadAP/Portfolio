@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PaperClipper from "@/assets/PaperClipper.png";
+import PaperClipper from "@/assets/images/PaperClipper.png";
 interface TechStack {
   name: string;
   icons: any[];
@@ -21,7 +21,6 @@ const props = defineProps<Props>();
   <div
     class="grid grid-cols-1 2xl:grid-cols-4 xl:items-center justify-between gap-10 w-full xl:px-20 px-8"
   >
-    <!-- Project Image with Hover Overlay -->
     <a
       :href="repoUrl"
       target="_blank"
@@ -65,8 +64,6 @@ const props = defineProps<Props>();
         </div>
       </div>
     </a>
-
-    <!-- Frontend / Backend Cards -->
 
     <div
       class="col-span-1 2xl:col-span-1 flex flex-col lg:flex-row 2xl:flex-col justify-around w-full gap-4 lg:gap-10"

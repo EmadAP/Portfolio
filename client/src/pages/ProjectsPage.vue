@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import AxiosIconSvg from "@/assets/icons/Axios-icon-svg.vue";
-import CssIconSvg from "@/assets/icons/Css-icon-svg.vue";
-import ExpressIconSvg from "@/assets/icons/Express-icon-svg.vue";
-import HtmlIconSvg from "@/assets/icons/Html-icon-svg.vue";
-import MongodbIconSvg from "@/assets/icons/Mongodb-icon-svg.vue";
-import NextIconSvg from "@/assets/icons/Next-icon-svg.vue";
-import NodejsIconSvg from "@/assets/icons/Nodejs-icon-svg.vue";
-import ReactIconSvg from "@/assets/icons/React-icon-svg.vue";
-import ReactQueryIconSvg from "@/assets/icons/ReactQuery-icon-svg.vue";
-import ShadcnUiIconSvg from "@/assets/icons/ShadcnUi-icon-svg.vue";
-import TailwindcssIconSvg from "@/assets/icons/Tailwindcss-icon-svg.vue";
-import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
+import AxiosIconSvg from "@/components/icons/Axios-icon-svg.vue";
+import CssIconSvg from "@/components/icons/Css-icon-svg.vue";
+import ExpressIconSvg from "@/components/icons/Express-icon-svg.vue";
+import HtmlIconSvg from "@/components/icons/Html-icon-svg.vue";
+import MongodbIconSvg from "@/components/icons/Mongodb-icon-svg.vue";
+import NextIconSvg from "@/components/icons/Next-icon-svg.vue";
+import NodejsIconSvg from "@/components/icons/Nodejs-icon-svg.vue";
+import ReactIconSvg from "@/components/icons/React-icon-svg.vue";
+import ReactQueryIconSvg from "@/components/icons/ReactQuery-icon-svg.vue";
+import ShadcnUiIconSvg from "@/components/icons/ShadcnUi-icon-svg.vue";
+import TailwindcssIconSvg from "@/components/icons/Tailwindcss-icon-svg.vue";
+import TsIconSvg from "@/components/icons/Ts-icon-svg.vue";
 import MovingText from "@/components/MovingText.vue";
 import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
-import Tickly from "@/assets/Tickly.png";
-import TicklyDashboard from "@/assets/Tickly-Dashboard.png";
-import StayNest from "@/assets/Staynest.png";
+import Tickly from "@/assets/images/Tickly.png";
+import TicklyDashboard from "@/assets/images/Tickly-Dashboard.png";
+import StayNest from "@/assets/images/Staynest.png";
 </script>
 <template>
   <div class="font-main w-full bg-stone-200 text-stone-900 py-20">

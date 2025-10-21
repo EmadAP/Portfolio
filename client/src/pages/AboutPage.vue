@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Image from "@/assets/image1.jpg";
+import Image from "@/assets/images/image1.jpg";
 </script>
 <template>
   <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">

@@ -4,13 +4,12 @@ import { defineProps } from "vue";
 interface Props {
   label: string;
   icon: any;
-  smallRadius?: number; // optional
-  bigRadius?: number; // optional
+  smallRadius?: number;
+  bigRadius?: number;
 }
 
 const props = defineProps<Props>();
 
-// default fallbacks
 const smallRadius = props.smallRadius ?? 60;
 const bigRadius = props.bigRadius ?? 75;
 
@@ -29,7 +28,6 @@ const bigAngles = Array.from(
 
 <template>
   <div class="relative flex items-center justify-center group">
-    <!-- Orbiting icons -->
     <div
       class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     >
@@ -62,7 +60,6 @@ const bigAngles = Array.from(
       </div>
     </div>
 
-    <!-- Center Button -->
     <button
       class="cursor-pointer px-6 py-2 text-2xl text-stone-200 bg-stone-800 group-hover:bg-stone-700 rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
     >

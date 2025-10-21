@@ -17,7 +17,7 @@ import SkillsPage from "./SkillsPage.vue";
   <AboutPage id="about" />
 
   <div class="h-2 bg-stone-900"></div>
-  <!-- we have scroll width problem here  -->
+
   <SkillsPage id="skills" />
 
   <div class="h-2 bg-stone-900"></div>
