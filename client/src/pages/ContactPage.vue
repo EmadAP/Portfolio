@@ -2,6 +2,17 @@
 import { AiPhoneOutlined } from "@twistify/vue3-icons/ai";
 import { IonEmail } from "@twistify/vue3-icons/ion";
 import { TiLocation } from "@twistify/vue3-icons/ti";
+import { AiGithubFilled } from "@twistify/vue3-icons/ai";
+import { MdiTelegram } from "@twistify/vue3-icons/mdi";
+import { RaLinkedinLogo } from "@twistify/vue3-icons/ra";
+import { AiLinkOutlined } from "@twistify/vue3-icons/ai";
+import { LuClipboardCopy } from "@twistify/vue3-icons/lu";
+const copyEmail = () => {
+  navigator.clipboard.writeText("Emad.amoupour1997@gmail.com");
+};
+const copyPhone = () => {
+  navigator.clipboard.writeText("+98 911 886 0294");
+};
 </script>
 <template>
   <div class="font-main bg-stone-200 min-h-screen py-20 text-stone-900">
@@ -29,16 +40,59 @@ import { TiLocation } from "@twistify/vue3-icons/ti";
             <IonEmail :size="50" />
             <div class="flex flex-col gap-2 items-start">
               <h3 class="font-semibold text-base">Email</h3>
-              <span class="text-sm text-stone-700"
-                >Emad.amoupour1997@gmail.com</span
-              >
+              <span
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
+                @click="copyEmail"
+                >Emad.amoupour1997@gmail.com<LuClipboardCopy
+              /></span>
             </div>
           </div>
           <div class="flex flex-row gap-4">
             <AiPhoneOutlined :size="50" />
             <div class="flex flex-col gap-2 items-start">
               <h3 class="font-semibold text-base">Phone</h3>
-              <span class="text-sm text-stone-700">+98 911 886 0294</span>
+              <span
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
+                @click="copyPhone"
+                >+98 911 886 0294<LuClipboardCopy
+              /></span>
+            </div>
+          </div>
+          <div class="flex flex-row gap-4">
+            <AiGithubFilled :size="50" />
+            <div class="flex flex-col gap-2 items-start">
+              <h3 class="font-semibold text-base">Github</h3>
+              <a
+                href="https://github.com/EmadAP"
+                target="_blank"
+                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
+                >github.com/EmadAP <AiLinkOutlined
+              /></a>
+            </div>
+          </div>
+          <div class="flex flex-row gap-4">
+            <RaLinkedinLogo :size="50" />
+            <div class="flex flex-col gap-2 items-start">
+              <h3 class="font-semibold text-base">Linkedin</h3>
+              <a
+                href="https://www.linkedin.com/in/emad-amoupour-60983438b/"
+                target="_blank"
+                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
+                >linkedin.com/emad-amoupour <AiLinkOutlined
+              /></a>
+            </div>
+          </div>
+          <div class="flex flex-row gap-4">
+            <MdiTelegram :size="50" />
+            <div class="flex flex-col gap-2 items-start">
+              <h3 class="font-semibold text-base">Telegram</h3>
+
+              <a
+                href="https://t.me/EmadAP"
+                target="_blank"
+                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
+                >t.me/EmadAP <AiLinkOutlined
+              /></a>
             </div>
           </div>
           <div class="flex flex-row gap-4">

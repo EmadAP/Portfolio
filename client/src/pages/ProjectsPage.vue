@@ -24,7 +24,7 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
       </h1>
 
       <div
-        class="pt-20 flex flex-col items-center h-full justify-between gap-20"
+        class="pt-20 flex flex-col items-center h-full justify-between gap-30"
       >
         <ProjectPageTemp
           projectName="Tickly"

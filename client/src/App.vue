@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Mouse from "./assets/Mouse.vue";
+import ScrollToTopBtn from "./components/ScrollToTopBtn.vue";
 import Navbar from "./template/Navbar.vue";
 </script>
 
@@ -13,5 +14,6 @@ import Navbar from "./template/Navbar.vue";
 
     <router-view />
     <Mouse />
+    <ScrollToTopBtn />
   </div>
 </template>

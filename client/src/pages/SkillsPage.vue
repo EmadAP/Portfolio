@@ -19,6 +19,13 @@ import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
 import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
 import AnimatedBtn from "@/components/AnimatedBtn.vue";
 import { AiCloudDownloadOutlined } from "@twistify/vue3-icons/ai";
+
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = "/EmadAp_resume_english.pdf"; // path from /public
+  link.download = "EmadAp_resume_english.pdf"; // file name for user
+  link.click();
+};
 </script>
 <template>
   <div
@@ -92,6 +99,7 @@ import { AiCloudDownloadOutlined } from "@twistify/vue3-icons/ai";
           :icon="AiCloudDownloadOutlined"
           :smallRadius="80"
           :bigRadius="110"
+          @click="downloadResume"
         />
       </di>
     </div>

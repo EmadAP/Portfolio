@@ -17,8 +17,8 @@
         ></div>
         <img
           class="px-6 py-6 z-10 mx-auto rounded-full object-cover"
-          src="/public/Cat-on-couch.jpg"
-          alt="cat"
+          src="/image1.jpg"
+          alt="developer"
         />
       </div>
       <div class="leading-10 flex flex-col gap-6 pt-8 lg:text-2xl text-xl">

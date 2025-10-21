@@ -18,52 +18,57 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="grid grid-cols-1 xl:grid-cols-3 2xl:grid-cols-4 justify-between gap-10 w-full xl:px-15 px-8"
+    class="grid grid-cols-1 2xl:grid-cols-4 xl:items-center justify-between gap-10 w-full xl:px-20 px-8"
   >
     <!-- Project Image with Hover Overlay -->
     <a
       :href="repoUrl"
       target="_blank"
       rel="noopener noreferrer"
-      class="xl:col-span-2 col-span-1 2xl:col-span-3 relative rounded-2xl xl:h-[700px] h-fit w-full mx-auto xl:hover:shadow-2xl shadow-2xl transition duration-500"
+      class="group col-span-1 2xl:col-span-3 relative rounded-2xl h-fit w-full mx-auto transition-all duration-500"
     >
       <div
-        class="hidden lg:flex p-5 absolute z-10 h-full w-full whitespace-normal bg-stone-800 text-center text-stone-200 opacity-0 transition duration-500 rounded-2xl hover:opacity-90"
-      >
-        <p
-          class="font-semibold lg:leading-16 lg:text-3xl xl:text-4xl 2xl:leading-20"
+        class="absolute z-0 rounded-2xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+      ></div>
+      <div class="relative z-10 m-5">
+        <div
+          class="hidden lg:flex p-5 absolute z-10 h-full w-full whitespace-normal bg-stone-800 text-center text-stone-200 opacity-0 transition duration-500 rounded-2xl hover:opacity-90"
         >
-          <span
-            class="font-semiMain lg:text-4xl xl:text-5xl text-stone-800 bg-stone-200"
+          <p
+            class="font-semibold lg:leading-16 lg:text-3xl xl:text-4xl 2xl:leading-20"
           >
-            {{ projectName }}
-          </span>
-          {{ description }}
-        </p>
-      </div>
-      <img
-        class="rounded-2xl xl:h-[700px] h-fit w-fit object-contain mx-auto bg-stone-100"
-        :src="imageUrl"
-        :alt="`${projectName}-project`"
-      />
-      <div
-        class="flex lg:hidden px-5 py-10 h-full w-full whitespace-normal bg-stone-200 text-center text-stone-900 rounded-2xl"
-      >
-        <p
-          class="font-semibold text-xl leading-10 sm:text-2xl sm:leading-13 md:text-2xl"
+            <span
+              class="font-semiMain lg:text-4xl xl:text-5xl text-stone-800 bg-stone-200"
+            >
+              {{ projectName }}
+            </span>
+            {{ description }}
+          </p>
+        </div>
+        <img
+          class="rounded-t-2xl lg:rounded-2xl h-fit w-fit object-contain mx-auto bg-stone-100"
+          :src="imageUrl"
+          :alt="`${projectName}-project`"
+        />
+        <div
+          class="rounded-b-2xl flex lg:hidden px-5 py-10 h-full w-full whitespace-normal bg-stone-200 text-center text-stone-900"
         >
-          <span class="font-semiMain text-3xl text-stone-200 bg-stone-900">
-            {{ projectName }}
-          </span>
-          {{ description }}
-        </p>
+          <p
+            class="font-semibold text-xl leading-10 sm:text-2xl sm:leading-13 md:text-2xl"
+          >
+            <span class="font-semiMain text-3xl text-stone-200 bg-stone-900">
+              {{ projectName }}
+            </span>
+            {{ description }}
+          </p>
+        </div>
       </div>
     </a>
 
     <!-- Frontend / Backend Cards -->
 
     <div
-      class="col-span-1 xl:col-span-1 2xl:col-span-1 flex flex-col lg:flex-row xl:flex-col justify-between w-full gap-4 lg:gap-10"
+      class="col-span-1 2xl:col-span-1 flex flex-col lg:flex-row 2xl:flex-col justify-around w-full gap-4 lg:gap-10"
     >
       <div
         class="relative h-fit xl:w-fit bg-stone-100 px-2 py-10 rounded-2xl flex flex-col gap-8 hover:shadow-2xl transition duration-500"
