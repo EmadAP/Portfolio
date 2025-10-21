@@ -23,7 +23,7 @@ import Resume from "@/assets/images/Resume.png";
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/EmadAp_resume_english.pdf";
+  link.href = `${import.meta.env.BASE_URL}EmadAp_resume_english.pdf`;
   link.download = "EmadAp_resume_english.pdf";
   link.click();
 };
