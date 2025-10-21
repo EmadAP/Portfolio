@@ -83,7 +83,7 @@ const downloadResume = () => {
         </p>
 
         <div
-          class="hover:scale-105 mb-20 w-full bg-white border border-stone-900/70 shadow-2xl rounded-xl relative transition-all duration-400 inline-flex group"
+          class="hover:scale-105 mb-24 lg:mb-20 w-full bg-white border border-stone-900/70 shadow-2xl rounded-xl relative transition-all duration-400 inline-flex group"
         >
           <div
             class="absolute rounded-xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"

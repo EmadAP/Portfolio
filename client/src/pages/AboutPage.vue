@@ -26,7 +26,8 @@ import Image from "@/assets/images/image1.jpg";
       <div class="leading-10 flex flex-col gap-6 pt-8 lg:text-2xl text-xl">
         <p class="">
           I'm a Junior
-          <span class="bg-stone-900 text-stone-200 text-2xl lg:text-3xl"
+          <span
+            class="bg-stone-900 text-stone-200 text-2xl lg:text-3xl font-semiMain font-extrabold"
             >Front-End Developer</span
           >
           with a passion for building modern, responsive, and user-friendly

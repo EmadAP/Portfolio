@@ -35,10 +35,10 @@ const props = defineProps<Props>();
           class="hidden lg:flex p-5 absolute z-10 h-full w-full whitespace-normal bg-stone-800 text-center text-stone-200 opacity-0 transition duration-500 rounded-2xl hover:opacity-90"
         >
           <p
-            class="font-semibold lg:leading-16 lg:text-3xl xl:text-4xl 2xl:leading-20"
+            class="font-semibold lg:leading-16 lg:text-2xl xl:text-3xl xl:leading-20 2xl:text-3xl 2xl:leading-16 my-auto"
           >
             <span
-              class="font-semiMain lg:text-4xl xl:text-5xl text-stone-800 bg-stone-200"
+              class="font-semiMain lg:text-3xl xl:text-5xl text-stone-800 bg-stone-200"
             >
               {{ projectName }}
             </span>

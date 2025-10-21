@@ -27,7 +27,7 @@ const onScroll = () => {
   const currentScroll = window.scrollY;
   const delta = Math.abs(currentScroll - lastScroll);
 
-  const newDuration = Math.max(4, 14 - delta / 20);
+  const newDuration = Math.max(2, 10 - delta / 20);
   duration.value = newDuration;
 
   lastScroll = currentScroll;
@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
       >
         <IonChevronLeft :size="40" />
         <span
-          class="pointer-events-none text-[100px] font-extrabold font-title text-stone-700 leading-none"
+          class="pointer-events-none text-[100px] font-extrabold font-btn text-stone-700 leading-none"
         >
           {{ skill }}
         </span>
@@ -78,7 +78,7 @@ onBeforeUnmount(() => {
       >
         <IonChevronLeft :size="40" />
         <span
-          class="pointer-events-none text-[100px] font-extrabold font-title text-stone-700 leading-none"
+          class="pointer-events-none text-[100px] font-extrabold font-btn text-stone-700 leading-none"
         >
           {{ skill }}
         </span>

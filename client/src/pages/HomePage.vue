@@ -16,17 +16,19 @@ function scrollToSection(id: string) {
       class="pt-30 pb-20 gap-5 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
     >
       <h1
-        class="relative font-title text-6xl sm:text-7xl md:text-8xl font-bold w-fit"
+        class="relative font-btn text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-bold w-fit"
       >
         <span>Hi!. My name is Emad Amoupour</span>
       </h1>
 
-      <p class="md:text-2xl lg:text-3xl text-xl md:leading-16 leading-12">
+      <p
+        class="md:text-2xl xl:text-3xl text-xl md:leading-13 lg:leading-16 leading-11"
+      >
         <span class="font-semiMain font-extrabold lg:text-4xl text-3xl"
           >Welcome to my portfolio.
         </span>
         I’m a Junior
-        <span class="font-semiMain bg-stone-800 text-stone-200"
+        <span class="font-semiMain font-extrabold bg-stone-800 text-stone-200"
           >Front-End Developer</span
         >
         passionate about building responsive, user-friendly interfaces and
@@ -42,6 +44,8 @@ function scrollToSection(id: string) {
         <AnimatedBtn
           label="Resume"
           :icon="MiResume"
+          :smallRadius="63"
+          :bigRadius="78"
           @click="scrollToSection('resume')"
         />
 
@@ -49,7 +53,7 @@ function scrollToSection(id: string) {
           label="Contact"
           :icon="IonMdContact"
           :smallRadius="65"
-          :bigRadius="80"
+          :bigRadius="83"
           @click="scrollToSection('contact')"
         />
       </div>

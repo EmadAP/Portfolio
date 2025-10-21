@@ -61,7 +61,7 @@ const bigAngles = Array.from(
     </div>
 
     <button
-      class="cursor-pointer px-6 py-2 text-2xl text-stone-200 bg-stone-800 group-hover:bg-stone-700 rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+      class="font-btn font-semibold cursor-pointer px-6 py-2 text-2xl text-stone-200 bg-stone-800 group-hover:bg-stone-700 rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
     >
       {{ props.label }}
     </button>

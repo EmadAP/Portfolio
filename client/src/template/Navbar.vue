@@ -51,18 +51,35 @@ function scrollToSection(id: string) {
           </div>
         </button>
 
-        <div class="lg:flex hidden flex-row items-center justify-center gap-6">
-          <button class="Nav-Btn" @click="scrollToSection('home')">Home</button>
-          <button class="Nav-Btn" @click="scrollToSection('projects')">
+        <div class="lg:flex hidden flex-row items-center justify-center gap-8">
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('home')"
+          >
+            Home
+          </button>
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('projects')"
+          >
             Projects
           </button>
-          <button class="Nav-Btn" @click="scrollToSection('about')">
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('about')"
+          >
             About
           </button>
-          <button class="Nav-Btn" @click="scrollToSection('skills')">
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('skills')"
+          >
             Skills
           </button>
-          <button class="Nav-Btn" @click="scrollToSection('contact')">
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('contact')"
+          >
             Contact
           </button>
         </div>
@@ -91,31 +108,31 @@ function scrollToSection(id: string) {
           "
         >
           <button
-            class="Nav-Btn w-full text-left"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
             @click="scrollToSection('home')"
           >
             Home
           </button>
           <button
-            class="Nav-Btn w-full text-left"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
             @click="scrollToSection('projects')"
           >
             Projects
           </button>
           <button
-            class="Nav-Btn w-full text-left"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
             @click="scrollToSection('about')"
           >
             About
           </button>
           <button
-            class="Nav-Btn w-full text-left"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
             @click="scrollToSection('skills')"
           >
             Skills
           </button>
           <button
-            class="Nav-Btn w-full text-left"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
             @click="scrollToSection('contact')"
           >
             Contact
@@ -126,36 +143,4 @@ function scrollToSection(id: string) {
   </div>
 </template>
 
-<style>
-.Nav-Btn {
-  position: relative;
-  padding: 6px 12px;
-  font-size: 20px;
-  font-weight: 550;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.Nav-Btn::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 100%;
-  height: 100%;
-  background-color: #57534d;
-  border-radius: inherit;
-  z-index: -1;
-  transition: transform 0.4s ease-in-out;
-  transform-origin: center;
-}
-
-.Nav-Btn:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-</style>
+<style></style>
