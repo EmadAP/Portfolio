@@ -13,6 +13,9 @@ import TailwindcssIconSvg from "@/assets/icons/Tailwindcss-icon-svg.vue";
 import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
 import MovingText from "@/components/MovingText.vue";
 import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
+import TicklyImg from "@/../public/Tickly.png";
+import TicklyDashboardImg from "@/../public/Tickly-Dashboard.png";
+import StayNestImg from "@/../public/Staynest.png";
 </script>
 <template>
   <div class="font-main w-full bg-stone-200 text-stone-900 py-20">
@@ -29,7 +32,7 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
         <ProjectPageTemp
           projectName="Tickly"
           repoUrl="https://github.com/EmadAP/Tickly/tree/main/client"
-          imageUrl="/Tickly.png"
+          :imageUrl="TicklyImg"
           description="is a web application I built to make browsing and purchasing
                 event tickets easy and intuitive. My goal was to create a
                 smooth, interactive user experience, designing a frontend that
@@ -64,7 +67,7 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
         <ProjectPageTemp
           projectName="Tickly Dashboard"
           repoUrl="https://github.com/EmadAP/Tickly/tree/main/admin"
-          imageUrl="/Tickly-Dashboard.png"
+          :imageUrl="TicklyDashboardImg"
           description=" was built as the admin side of the platform, giving organizers
                 the ability to manage events, tickets, and sales in one place.
                 My goal with this part of the project was to create a clear and
@@ -99,7 +102,7 @@ import ProjectPageTemp from "@/template/ProjectPageTemp.vue";
         <ProjectPageTemp
           projectName="StayNest"
           repoUrl="https://github.com/EmadAP/StayNest"
-          imageUrl="/Staynest.png"
+          :imageUrl="StayNestImg"
           description="is a web application I built to let users list and explore
                 properties for short-term stays. My goal was to create a smooth
                 listing and browsing experience, where users can easily post
