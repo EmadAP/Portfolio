@@ -19,10 +19,12 @@ import TsIconSvg from "@/assets/icons/Ts-icon-svg.vue";
 import VueIconSvg from "@/assets/icons/Vue-icon-svg.vue";
 import AnimatedBtn from "@/components/AnimatedBtn.vue";
 import { AiCloudDownloadOutlined } from "@twistify/vue3-icons/ai";
+import Resume from "@/assets/Resume.png";
+import ResumePDF from "@/assets/EmadAp_resume_english.pdf";
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/assets/EmadAp_resume_english.pdf";
+  link.href = "ResumePDF";
   link.download = "EmadAp_resume_english.pdf";
   link.click();
 };
@@ -89,7 +91,7 @@ const downloadResume = () => {
           ></div>
           <img
             class="z-10 mx-auto rounded-xl object-cover"
-            src="/assets/Resume.png"
+            :src="Resume"
             alt="resume"
           />
         </div>

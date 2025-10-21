@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PaperClipper from "@/assets/PaperClipper.png";
 interface TechStack {
   name: string;
   icons: any[];
@@ -74,7 +75,7 @@ const props = defineProps<Props>();
         class="relative h-fit xl:w-fit bg-stone-100 px-2 py-10 rounded-2xl flex flex-col gap-8 hover:shadow-2xl transition duration-500"
       >
         <div class="flex absolute -top-5 right-5">
-          <img src="/PaperClipper.png" alt="clipper" />
+          <img :src="PaperClipper" alt="clipper" />
         </div>
         <div class="flex flex-col gap-8 w-full">
           <h3 class="text-5xl font-bold font-btn">{{ frontend.name }}:</h3>
@@ -93,7 +94,7 @@ const props = defineProps<Props>();
         class="relative h-fit xl:w-fit bg-stone-100 px-2 py-10 rounded-2xl flex flex-col gap-8 hover:shadow-2xl transition duration-500"
       >
         <div class="hidden lg:flex absolute -top-5 right-5">
-          <img src="/PaperClipper.png" alt="clipper" />
+          <img :src="PaperClipper" alt="clipper" />
         </div>
         <div
           class="flex flex-row lg:hidden absolute -top-8 left-1/2 -translate-x-1/2 justify-between w-full gap-2"

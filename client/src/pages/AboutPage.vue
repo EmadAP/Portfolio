@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Image from "@/assets/image1.jpg";
+</script>
 <template>
   <div class="font-main px-4 w-full bg-stone-200 py-20 text-stone-900">
     <div
@@ -17,7 +19,7 @@
         ></div>
         <img
           class="px-6 py-6 z-10 mx-auto rounded-full object-cover"
-          src="/assets/image1.jpg"
+          :src="Image"
           alt="developer"
         />
       </div>
