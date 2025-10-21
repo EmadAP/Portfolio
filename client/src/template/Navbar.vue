@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { AiCloseOutlined, AiMenuOutlined } from "@twistify/vue3-icons/ai";
 import { RaSlash } from "@twistify/vue3-icons/ra";
 import { IonChevronLeft, IonChevronRight } from "@twistify/vue3-icons/ion";
+import HamburgerButton from "@/components/HamburgerButton.vue";
 
 const isScrolled = ref(false);
 const isMenuOpen = ref(false);
@@ -34,7 +35,7 @@ function scrollToSection(id: string) {
       class="px-4 h-20 bg-stone-800 transition-all duration-700"
       :class="
         isScrolled
-          ? 'mx-auto lg:mx-20 sm:mx-2 sm:rounded-xl  mt-6 bg-stone-800/90 backdrop-blur-lg'
+          ? 'mx-auto lg:mx-10 xl:mx-20 sm:mx-2 md:mx-10 sm:rounded-xl  mt-6 bg-stone-800/90 backdrop-blur-lg'
           : 'mx-0'
       "
     >
@@ -78,26 +79,46 @@ function scrollToSection(id: string) {
           </button>
           <button
             class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            @click="scrollToSection('resumeNav')"
+          >
+            Resume
+          </button>
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('contact')"
           >
             Contact
           </button>
         </div>
-
-        <div class="lg:hidden flex">
-          <AiMenuOutlined
+<!-- 
+        <button
+          class="group lg:hidden flex h-20 w-20 cursor-pointer items-center justify-center bg-white p-3 hover:bg-stone-700 rounded-full"
+        >
+          <div class="space-y-2">
+            <span
+            v-if="!isMenuOpen"
+              class="block h-1 w-10 origin-center rounded-full bg-sky-400 transition-transform ease-in-out group-hover:translate-y-1.5 group-hover:rotate-45"
+              @click="isMenuOpen = true"
+            ></span>
+            <span
+            v-else
+              class="block h-1 w-8 origin-center rounded-full bg-rose-400 transition-transform ease-in-out group-hover:w-10 group-hover:-translate-y-1.5 group-hover:-rotate-45"
+              @click="isMenuOpen = false"
+            ></span>
+          </div>
+        </button> -->
+        <div class="lg:hidden flex"><AiMenuOutlined
             v-if="!isMenuOpen"
             :size="50"
-            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
+            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full transition-all duration-400"
             @click="isMenuOpen = true"
           />
           <AiCloseOutlined
             v-else
             :size="50"
-            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full"
+            class="cursor-pointer p-3 hover:bg-stone-700 rounded-full transition-all duration-400"
             @click="isMenuOpen = false"
-          />
-        </div>
+          /></div>
       </div>
       <transition name="fade">
         <div
@@ -130,6 +151,12 @@ function scrollToSection(id: string) {
             @click="scrollToSection('skills')"
           >
             Skills
+          </button>
+          <button
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"
+            @click="scrollToSection('resumeNav')"
+          >
+            Resume
           </button>
           <button
             class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300 w-full text-center"

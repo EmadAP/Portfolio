@@ -18,7 +18,7 @@ import TicklyDashboard from "@/assets/images/Tickly-Dashboard.png";
 import StayNest from "@/assets/images/Staynest.png";
 </script>
 <template>
-  <div class="font-main w-full bg-stone-200 text-stone-900 py-20">
+  <div class="font-main w-full min-h-screen bg-stone-200 text-stone-900 py-20">
     <div class="w-full h-full py-12 items-center">
       <h1
         class="max-w-screen-2xl mx-auto underline decoration-solid md:text-7xl text-5xl font-semibold font-btn text-center"

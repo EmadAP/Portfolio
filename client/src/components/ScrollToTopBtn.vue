@@ -27,7 +27,7 @@ onUnmounted(() => {
     <button
       v-if="isVisible"
       @click="scrollToTop"
-      class="fixed bottom-10 right-10 z-50 group w-36 h-36 rounded-full grid place-items-center cursor-pointer transition-transform duration-500 ease-in-out hover:-translate-y-3"
+      class="fixed md:bottom-10 md:right-10 bottom-4 right-4 z-50 group w-36 h-36 rounded-full grid place-items-center cursor-pointer transition-transform duration-500 ease-in-out hover:-translate-y-3"
     >
       <div
         class="absolute transition-all duration-700 rounded-full -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg opacity-80 group-hover:opacity-100 group-hover:-inset-1 animate-pulse"

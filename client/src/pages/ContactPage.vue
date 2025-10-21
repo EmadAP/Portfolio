@@ -15,7 +15,7 @@ const copyPhone = () => {
 };
 </script>
 <template>
-  <div class="font-main bg-stone-200 min-h-screen py-20 text-stone-900">
+  <div class="font-main bg-stone-200 min-h-screen py-20 text-stone-900 ">
     <div
       class="h-full py-14 md:py-16 px-6 lg:px-20 flex flex-col gap-14 items-center justify-between max-w-screen-2xl mx-auto"
     >
@@ -114,7 +114,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
               <input
                 type="text"
@@ -131,7 +131,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
               <input
                 type="email"
@@ -147,7 +147,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
 
               <textarea

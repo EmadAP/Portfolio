@@ -28,7 +28,7 @@ const props = defineProps<Props>();
       class="group col-span-1 2xl:col-span-3 relative rounded-2xl h-fit w-full mx-auto transition-all duration-500"
     >
       <div
-        class="absolute z-0 rounded-2xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+        class="absolute z-0 rounded-2xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
       ></div>
       <div class="relative z-10 m-5">
         <div

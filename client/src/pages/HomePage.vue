@@ -11,20 +11,28 @@ function scrollToSection(id: string) {
 }
 </script>
 <template>
-  <div class="font-main bg-stone-200 text-stone-900 h-screen overflow-hidden">
+  <div
+    class="text-center font-main px-4 min-h-screen w-full bg-stone-200 py-20 text-stone-900 overflow-hidden"
+  >
     <div
-      class="pt-30 pb-20 gap-5 h-full px-3 lg:px-20 flex flex-col items-center justify-around text-center max-w-screen-2xl mx-auto"
+      class="py-20 gap-20 h-full px-3 lg:px-20 flex flex-col items-center justify-enter text-center max-w-screen-2xl mx-auto"
     >
       <h1
-        class="relative font-btn text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-bold w-fit"
+        class="pb-10 md:pb-0 font-btn sm:w-fit flex flex-col md:flex-row items-start  md:items-center gap-4 lg:gap-2 w-full"
       >
-        <span>Hi!. My name is Emad Amoupour</span>
+        <span
+          class="text-2xl sm:text-3xl md:text-5xl md:font-black lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold pl-1"
+          >Hi!. My name is , </span
+        ><span
+          class="text-5xl leading-16 sm:leading-[70px] sm:text-7xl md:text-5xl md:font-black lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold"
+          >Emad Amoupour</span
+        >
       </h1>
 
       <p
-        class="md:text-2xl xl:text-3xl text-xl md:leading-13 lg:leading-16 leading-11"
+        class="pb-6 text-start sm:text-center md:text-2xl xl:text-3xl text-xl md:leading-13 lg:leading-16 leading-11"
       >
-        <span class="font-semiMain font-extrabold lg:text-4xl text-3xl"
+        <span class="font-semiMain font-black lg:text-3xl xl:text-4 text-2xl"
           >Welcome to my portfolio.
         </span>
         I’m a Junior
