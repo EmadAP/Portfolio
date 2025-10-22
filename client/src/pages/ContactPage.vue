@@ -15,7 +15,7 @@ const copyPhone = () => {
 };
 </script>
 <template>
-  <div class="font-main bg-stone-200 min-h-screen py-20 text-stone-900 ">
+  <div class="font-main bg-stone-200 min-h-screen py-20 text-stone-900">
     <div
       class="h-full py-14 md:py-16 px-6 lg:px-20 flex flex-col gap-14 items-center justify-between max-w-screen-2xl mx-auto"
     >
@@ -29,28 +29,36 @@ const copyPhone = () => {
         new ideas. Send a message or connect online.
       </p>
       <div
-        class="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-8 border py-10 px-5 rounded-xl shadow-2xl hover:scale-105 duration-300 bg-stone-100"
+        class="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-16 border py-10 px-5 rounded-xl shadow-2xl hover:scale-105 duration-300 bg-stone-100"
       >
         <div class="flex flex-col gap-8">
-          <h3 class="font-btn font-semibold text-start text-3xl pb-5">
+          <h3
+            class="font-btn font-semibold text-start text-2xl sm:text-3xl pb-5"
+          >
             Contact Information
           </h3>
 
-          <div class="flex flex-row gap-4">
-            <IonEmail :size="50" />
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <IonEmail :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Email</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Email</h3>
+              <h3 class="hidden sm:flex font-semibold text-base">Email</h3>
               <span
                 class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
                 @click="copyEmail"
-                >Emad.amoupour1997@gmail.com<LuClipboardCopy
+                >emad.amoupour1997@gmail.com<LuClipboardCopy
               /></span>
             </div>
           </div>
-          <div class="flex flex-row gap-4">
-            <AiPhoneOutlined :size="50" />
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <AiPhoneOutlined :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Phone</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Phone</h3>
+              <h3 class="hidden sm:flex font-semibold text-base">Phone</h3>
               <span
                 class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
                 @click="copyPhone"
@@ -58,53 +66,71 @@ const copyPhone = () => {
               /></span>
             </div>
           </div>
-          <div class="flex flex-row gap-4">
-            <AiGithubFilled :size="50" />
+
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <AiGithubFilled :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Github</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Github</h3>
+              <h3 class="hidden sm:flex font-semibold text-base">Github</h3>
               <a
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
                 href="https://github.com/EmadAP"
                 target="_blank"
-                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
                 >github.com/EmadAP <AiLinkOutlined
               /></a>
             </div>
           </div>
-          <div class="flex flex-row gap-4">
-            <RaLinkedinLogo :size="50" />
+
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <RaLinkedinLogo :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Linkedin</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Linkedin</h3>
+              <h3 class="hidden sm:flex font-semibold text-base">Linkedin</h3>
               <a
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
                 href="https://www.linkedin.com/in/emad-amoupour-60983438b/"
                 target="_blank"
-                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
                 >linkedin.com/emad-amoupour <AiLinkOutlined
               /></a>
             </div>
           </div>
-          <div class="flex flex-row gap-4">
-            <MdiTelegram :size="50" />
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <MdiTelegram :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Telegram</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Telegram</h3>
-
+              <h3 class="hidden sm:flex font-semibold text-base">Telegram</h3>
               <a
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
                 href="https://t.me/EmadAP"
                 target="_blank"
-                class="text-sm text-stone-700 flex flex-row gap-2 items-center"
                 >t.me/EmadAP <AiLinkOutlined
               /></a>
             </div>
           </div>
-          <div class="flex flex-row gap-4">
-            <TiLocation :size="50" />
+          <div class="flex flex-col sm:flex-row sm:gap-4 gap-1">
+            <div class="flex flex-row items-center gap-4">
+              <TiLocation :size="50" />
+              <h3 class="flex sm:hidden font-semibold text-base">Location</h3>
+            </div>
             <div class="flex flex-col gap-2 items-start">
-              <h3 class="font-semibold text-base">Location</h3>
-              <span class="text-sm text-stone-700">Iran-Gilan</span>
+              <h3 class="hidden sm:flex font-semibold text-base">Location</h3>
+              <span
+                class="text-sm text-stone-700 cursor-pointer flex flex-row items-center gap-2"
+                >Iran-Gilan<AiLinkOutlined
+              /></span>
             </div>
           </div>
         </div>
         <div class="flex flex-col gap-8">
-          <h3 class="font-btn font-semibold text-start text-3xl pb-5">
+          <h3
+            class="font-btn font-semibold text-start text-2xl sm:text-3xl pb-5"
+          >
             Send me a message
           </h3>
 
@@ -114,7 +140,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="gradient element-to-rotate shadow-2xl absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
               <input
                 type="text"
@@ -131,7 +157,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="gradient element-to-rotate shadow-2xl absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
               <input
                 type="email"
@@ -147,7 +173,7 @@ const copyPhone = () => {
               class="rounded-xl relative transition-all duration-400 inline-flex group"
             >
               <div
-                class="absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+                class="gradient element-to-rotate shadow-2xl absolute rounded-xl transition-all duration-1000 opacity-90 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
               ></div>
 
               <textarea
@@ -161,7 +187,7 @@ const copyPhone = () => {
             </div>
           </div>
           <button
-            class="font-btn bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 gradient element-to-rotate duration-300 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
+            class="font-btn font-bold bg-gradient-to-r from-sky-300 to-rose-300 via-violet-300 gradient element-to-rotate duration-300 cursor-pointer shadow-2xl text-stone-200 text-2xl px-6 py-2 rounded-xl"
           >
             Send Message
           </button>
@@ -170,7 +196,7 @@ const copyPhone = () => {
     </div>
   </div>
 </template>
-<style scoped>
+<style>
 @keyframes gradientChange {
   0% {
     background-position: 0%;

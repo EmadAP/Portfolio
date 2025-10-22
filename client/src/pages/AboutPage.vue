@@ -2,7 +2,9 @@
 import Image from "@/assets/images/image1.jpg";
 </script>
 <template>
-  <div class="font-main px-4 w-full bg-stone-200 min-h-screen py-20 text-stone-900">
+  <div
+    class="font-main px-4 w-full bg-stone-200 min-h-screen py-20 text-stone-900"
+  >
     <div
       class="flex flex-col gap-6 lg:gap-10 max-w-screen-2xl py-12 mx-auto items-center"
     >
@@ -15,7 +17,7 @@ import Image from "@/assets/images/image1.jpg";
         class="h-[350px] w-[350px] rounded-full relative transition-all duration-400 inline-flex group"
       >
         <div
-          class="absolute h-[350px] w-[350px] rounded-full transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+          class="gradient element-to-rotate shadow-2xl absolute h-[350px] w-[350px] rounded-full transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
         ></div>
         <img
           class="px-6 py-6 z-10 mx-auto rounded-full object-cover"
@@ -23,11 +25,13 @@ import Image from "@/assets/images/image1.jpg";
           alt="developer"
         />
       </div>
-      <div class="leading-10 flex flex-col gap-6 pt-8 lg:text-2xl text-xl">
+      <div
+        class="leading-10 flex flex-col gap-6 pt-8 lg:text-2xl text-lg sm:text-xl"
+      >
         <p class="">
           I'm a Junior
           <span
-            class="bg-stone-900 text-stone-200 text-2xl lg:text-3xl font-semiMain font-extrabold"
+            class="bg-stone-900 text-stone-200 text-xl sm:text-2xl lg:text-3xl font-semiMain font-extrabold"
             >Front-End Developer</span
           >
           with a passion for building modern, responsive, and user-friendly

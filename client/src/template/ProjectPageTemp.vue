@@ -19,7 +19,7 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="grid grid-cols-1 2xl:grid-cols-4 xl:items-center justify-between gap-10 w-full xl:px-20 px-8"
+    class="grid grid-cols-1 2xl:grid-cols-4 xl:items-center justify-between gap-10 w-full xl:px-20 sm:px-8 px-2"
   >
     <a
       :href="repoUrl"
@@ -28,7 +28,7 @@ const props = defineProps<Props>();
       class="group col-span-1 2xl:col-span-3 relative rounded-2xl h-fit w-full mx-auto transition-all duration-500"
     >
       <div
-        class="absolute z-0 rounded-2xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
+        class="spinColor gradient element-to-rotate shadow-2xl absolute z-0 rounded-2xl transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-sky-400 to-rose-400 via-violet-400 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-pulse"
       ></div>
       <div class="relative z-10 m-5">
         <div
@@ -51,12 +51,14 @@ const props = defineProps<Props>();
           :alt="`${projectName}-project`"
         />
         <div
-          class="rounded-b-2xl flex lg:hidden px-5 py-10 h-full w-full whitespace-normal bg-stone-200 text-center text-stone-900"
+          class="rounded-b-2xl flex lg:hidden px-2 sm:px-5 py-10 h-full w-full whitespace-normal bg-stone-200 text-start sm:text-center text-stone-900"
         >
           <p
-            class="font-semibold text-xl leading-10 sm:text-2xl sm:leading-13 md:text-2xl"
+            class="sm:font-semibold text-lg leading-10 sm:text-2xl sm:leading-13 md:text-2xl"
           >
-            <span class="font-semiMain text-3xl text-stone-200 bg-stone-900">
+            <span
+              class="font-semiMain text-xl sm:text-3xl text-stone-200 bg-stone-900"
+            >
               {{ projectName }}
             </span>
             {{ description }}

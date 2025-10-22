@@ -3,7 +3,6 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { AiCloseOutlined, AiMenuOutlined } from "@twistify/vue3-icons/ai";
 import { RaSlash } from "@twistify/vue3-icons/ra";
 import { IonChevronLeft, IonChevronRight } from "@twistify/vue3-icons/ion";
-import HamburgerButton from "@/components/HamburgerButton.vue";
 
 const isScrolled = ref(false);
 const isMenuOpen = ref(false);
@@ -45,7 +44,7 @@ function scrollToSection(id: string) {
         <button class="cursor-pointer" @click="scrollToSection('home')">
           <div class="flex flex-row items-center relative">
             <IonChevronLeft :size="20" />
-            <p class="text-3xl font-base">Emad Amoupour</p>
+            <p class="sm:text-3xl text-2xl font-base">Emad Amoupour</p>
             <RaSlash :size="30" class="absolute -right-9" />
 
             <IonChevronRight :size="20" class="absolute -right-11" />
@@ -54,60 +53,44 @@ function scrollToSection(id: string) {
 
         <div class="lg:flex hidden flex-row items-center justify-center gap-8">
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('home')"
           >
             Home
           </button>
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('projects')"
           >
             Projects
           </button>
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('about')"
           >
             About
           </button>
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('skills')"
           >
             Skills
           </button>
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('resumeNav')"
           >
             Resume
           </button>
           <button
-            class="px-2 py-2 text-xl font-semibold cursor-pointer border-b-4 bg-transparent border-b-transparent hover:border-b-stone-200 transform duration-300"
+            class="px-2 py-2 text-xl font-semibold cursor-pointer border-y-4 bg-transparent border-y-transparent hover:border-b-stone-200 transform duration-300"
             @click="scrollToSection('contact')"
           >
             Contact
           </button>
         </div>
-<!-- 
-        <button
-          class="group lg:hidden flex h-20 w-20 cursor-pointer items-center justify-center bg-white p-3 hover:bg-stone-700 rounded-full"
-        >
-          <div class="space-y-2">
-            <span
-            v-if="!isMenuOpen"
-              class="block h-1 w-10 origin-center rounded-full bg-sky-400 transition-transform ease-in-out group-hover:translate-y-1.5 group-hover:rotate-45"
-              @click="isMenuOpen = true"
-            ></span>
-            <span
-            v-else
-              class="block h-1 w-8 origin-center rounded-full bg-rose-400 transition-transform ease-in-out group-hover:w-10 group-hover:-translate-y-1.5 group-hover:-rotate-45"
-              @click="isMenuOpen = false"
-            ></span>
-          </div>
-        </button> -->
-        <div class="lg:hidden flex"><AiMenuOutlined
+        <div class="lg:hidden flex">
+          <AiMenuOutlined
             v-if="!isMenuOpen"
             :size="50"
             class="cursor-pointer p-3 hover:bg-stone-700 rounded-full transition-all duration-400"
@@ -118,7 +101,8 @@ function scrollToSection(id: string) {
             :size="50"
             class="cursor-pointer p-3 hover:bg-stone-700 rounded-full transition-all duration-400"
             @click="isMenuOpen = false"
-          /></div>
+          />
+        </div>
       </div>
       <transition name="fade">
         <div
